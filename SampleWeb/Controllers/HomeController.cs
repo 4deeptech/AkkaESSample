@@ -35,8 +35,10 @@ namespace SampleWeb.Controllers
         [HttpPost]
         public ActionResult Create(Account acc)
         {
-            SystemActors.CommandProcessor.Tell(new CreateAccount(Guid.NewGuid(),acc.TaxNumber,acc.EntityName,acc.AccountType));
-            //Simulate Eventually consistency
+            //We would want to verify if the user has the proper permissions to even send this command on the client side and then validate on the handler side before
+            //processing the command. This way we can immediately tell the user they don't have permission via the UI AND prevent unauthorized command execution on the back end
+            SystemActors.CommandProcessor.Tell(new CreateAccount(Guid.NewGuid(), acc.TaxNumber, acc.EntityName, acc.AccountType, MessageContextFactory.Create(this.HttpContext)));
+            //Simulate Eventual consistency
             Thread.Sleep(2000);
             return new RedirectResult("/home/accounts");
         }
@@ -69,9 +71,9 @@ namespace SampleWeb.Controllers
         [HttpPost]
         public ActionResult Edit(AccountAddressDTO dto)
         {
-            SystemActors.CommandProcessor.Tell(new UpdateAccountMailingAddress(dto.AccountId, 
-                new Domain.Address(dto.StreetAddress1,dto.StreetAddress2,dto.CityTownVilla,dto.StateProvinceTerritory,dto.PostalCode)));
-            //Simulate Eventually consistency
+            SystemActors.CommandProcessor.Tell(new UpdateAccountMailingAddress(dto.AccountId,
+                new Domain.Address(dto.StreetAddress1, dto.StreetAddress2, dto.CityTownVilla, dto.StateProvinceTerritory, dto.PostalCode), MessageContextFactory.Create(this.HttpContext)));
+            //Simulate Eventual consistency
             Thread.Sleep(2000);
             return new RedirectResult("/home/accounts");
         }

@@ -8,4 +8,4 @@ See more about Event Store [here](https://www.geteventstore.com/)
 
 This makes use of the Akka.Net EventStore [persistence code](https://github.com/4deeptech/Akka.Persistence.EventStore).
 
-There is a [blog article](http://www.4deeptech.com/blog) being writtn that goes over the main points of interest.
+There is a [blog article](http://www.4deeptech.com/blog) being written that goes over the main points of interest.

@@ -14,8 +14,16 @@ namespace SampleWeb.Helpers
         {
             using (WebClient wc = new WebClient())
             {
-                var json = wc.DownloadString("http://127.0.0.1:2113/projection/account-index/state");
-                return JsonConvert.DeserializeObject<AccountListing>(json).Accounts;
+                try
+                {
+                    var json = wc.DownloadString("http://127.0.0.1:2113/projection/account-index/state");
+                    return JsonConvert.DeserializeObject<AccountListing>(json).Accounts;
+                }
+                catch(Exception exc)
+                {
+                    //looks like out projection doesn't exist or is not accessible
+                    return new List<Account>();
+                }
             }
         }
     }

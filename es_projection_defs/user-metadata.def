@@ -1,0 +1,16 @@
+fromAll().
+	
+	when({"Akka.Persistence.Persistent" : function(state,e) {
+
+            var data = e.body["Payload"];
+
+	    if(e.metadata !== null && e.metadata.Username !== undefined && e.metadata.Username !== null)
+
+            {
+
+                emit(e.metadata.Username,data.$type, data);
+
+            }
+
+    }
+});

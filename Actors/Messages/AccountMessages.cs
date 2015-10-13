@@ -14,7 +14,7 @@ namespace Messages
         Guid AccountId { get; }
     }
 
-    public class CreateAccount : IAccountMessage, IConsistentHashable, ICommand
+    public class CreateAccount : Command, IAccountMessage, IConsistentHashable
     {
         public Guid AccountId { get; private set; }
         public string TaxNumber { get; private set; }
@@ -27,6 +27,16 @@ namespace Messages
         }
 
         public CreateAccount(Guid accountId, string taxNumber, string entityName, AccountType type)
+            : base(accountId)
+        {
+            AccountId = accountId;
+            TaxNumber = taxNumber;
+            EntityName = entityName;
+            Type = type;
+        }
+
+        public CreateAccount(Guid accountId, string taxNumber, string entityName, AccountType type, IMessageContext context)
+            : base(accountId,context)
         {
             AccountId = accountId;
             TaxNumber = taxNumber;
@@ -54,6 +64,15 @@ namespace Messages
 
         public AccountCreated(Guid accountId, string taxNumber, string entityName, AccountType type, int version)
             : base(accountId, version)
+        {
+            AccountId = accountId;
+            TaxNumber = taxNumber;
+            EntityName = entityName;
+            Type = type;
+        }
+
+        public AccountCreated(Guid accountId, string taxNumber, string entityName, AccountType type, int version, IMessageContext context)
+            : base(accountId, version, context)
         {
             AccountId = accountId;
             TaxNumber = taxNumber;
@@ -92,7 +111,7 @@ namespace Messages
         }
     }
 
-    public class UpdateAccount : IAccountMessage, IConsistentHashable, ICommand
+    public class UpdateAccount : Command, IAccountMessage, IConsistentHashable
     {
         public Guid AccountId { get; private set; }
         public string TaxNumber { get; private set; }
@@ -105,6 +124,16 @@ namespace Messages
         }
 
         public UpdateAccount(Guid accountId, string taxNumber, string entityName, AccountType type)
+            : base(accountId)
+        {
+            AccountId = accountId;
+            TaxNumber = taxNumber;
+            EntityName = entityName;
+            Type = type;
+        }
+
+        public UpdateAccount(Guid accountId, string taxNumber, string entityName, AccountType type, IMessageContext context)
+            : base(accountId,context)
         {
             AccountId = accountId;
             TaxNumber = taxNumber;
@@ -139,6 +168,15 @@ namespace Messages
             Type = type;
         }
 
+        public AccountUpdated(Guid accountId, string taxNumber, string entityName, AccountType type, int version, IMessageContext context)
+            : base(accountId, version, context)
+        {
+            AccountId = accountId;
+            TaxNumber = taxNumber;
+            EntityName = entityName;
+            Type = type;
+        }
+
         bool IEquatable<AccountUpdated>.Equals(AccountUpdated other)
         {
             return AccountId == other.AccountId
@@ -148,7 +186,7 @@ namespace Messages
         }
     }
 
-    public class UpdateAccountMailingAddress : IAccountMessage, IConsistentHashable, ICommand
+    public class UpdateAccountMailingAddress : Command, IAccountMessage, IConsistentHashable
     {
         public Guid AccountId { get; private set; }
         public Address MailingAddress { get; private set; }
@@ -159,6 +197,14 @@ namespace Messages
         }
 
         public UpdateAccountMailingAddress(Guid accountId, Address mailingAddress)
+            : base(accountId)
+        {
+            AccountId = accountId;
+            MailingAddress = mailingAddress;
+        }
+
+        public UpdateAccountMailingAddress(Guid accountId, Address mailingAddress, IMessageContext context)
+            : base(accountId, context)
         {
             AccountId = accountId;
             MailingAddress = mailingAddress;
@@ -182,6 +228,13 @@ namespace Messages
 
         public AccountMailingAddressUpdated(Guid accountId, Address mailingAddress, int version)
             : base(accountId, version)
+        {
+            AccountId = accountId;
+            MailingAddress = mailingAddress;
+        }
+
+        public AccountMailingAddressUpdated(Guid accountId, Address mailingAddress, int version, IMessageContext context)
+            : base(accountId, version, context)
         {
             AccountId = accountId;
             MailingAddress = mailingAddress;

@@ -1,0 +1,1 @@
+EventStore.ClusterNode.exe --db ./esdata --log ./eslogs --run-projections=all

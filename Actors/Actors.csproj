@@ -93,6 +93,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AggregateRootCoordinatorActor.cs" />
+    <Compile Include="ContextHelper.cs" />
+    <Compile Include="MessageContext.cs" />
     <Compile Include="Messages\AccountMessages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AccountActor.cs" />

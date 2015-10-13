@@ -1,0 +1,18 @@
+fromAll().
+    when({
+        "Akka.Persistence.Persistent" : function(state,evt) {
+              var data = evt.body["Payload"];
+              if(data.$type == "Messages.AccountCreated, Actors")
+              {
+                emit("account-index-better", data.$type, data)
+              }
+              if(data.$type == "Messages.AccountUpdated, Actors")
+              {
+                emit("account-index-better", data.$type, data)
+              }
+              if(data.$type == "Messages.AccountMailingAddressUpdated, Actors")
+              {
+                emit("account-index-better", data.$type, data)
+              }
+         }
+    });

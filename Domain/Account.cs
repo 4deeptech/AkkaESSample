@@ -9,7 +9,7 @@ namespace Domain
     public class Account
     {
         /// <summary>
-        /// Unique system generated identifier for owner
+        /// Unique system generated identifier for account
         /// </summary>
         public Guid AccountId { get; set; }
 

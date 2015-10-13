@@ -1,0 +1,197 @@
+[2015-10-13 12:13:42.8166] [Akka.Event.EventStream] [DEBUG] : subscribing [akka://sampleweb/system/log1-NLogLogger] to channel Akka.Event.Info
+[2015-10-13 12:13:42.8356] [Akka.Event.EventStream] [DEBUG] : subscribing [akka://sampleweb/system/log1-NLogLogger] to channel Akka.Event.Warning
+[2015-10-13 12:13:42.8356] [Akka.Event.EventStream] [DEBUG] : subscribing [akka://sampleweb/system/log1-NLogLogger] to channel Akka.Event.Error
+[2015-10-13 12:13:42.8356] [Akka.Event.EventStream] [DEBUG] : Logger log1-NLogLogger [NLogLogger] started
+[2015-10-13 12:13:42.8356] [Akka.Event.EventStream] [DEBUG] : subscribing [akka://sampleweb/system/UnhandledMessageForwarder] to channel Akka.Event.UnhandledMessage
+[2015-10-13 12:13:42.8356] [Akka.Event.LoggingBus+UnhandledMessageForwarder] [DEBUG] : Started (Akka.Event.LoggingBus+UnhandledMessageForwarder)
+[2015-10-13 12:13:42.8356] [Akka.Actor.SystemGuardianActor] [DEBUG] : now supervising akka://sampleweb/system/UnhandledMessageForwarder
+[2015-10-13 12:13:42.8356] [Akka.Event.EventStream] [DEBUG] : StandardOutLogger being removed
+[2015-10-13 12:13:42.8356] [Akka.Event.EventStream] [DEBUG] : unsubscribing [akka://all-systems/] from all channels
+[2015-10-13 12:13:42.8356] [Akka.Event.EventStream] [DEBUG] : Default Loggers started
+[2015-10-13 12:13:42.8356] [Akka.Actor.SystemGuardianActor] [DEBUG] : now supervising akka://sampleweb/system/deadLetterListener
+[2015-10-13 12:13:42.8356] [Akka.Event.EventStream] [DEBUG] : subscribing [akka://sampleweb/system/deadLetterListener] to channel Akka.Event.DeadLetter
+[2015-10-13 12:13:42.8356] [Akka.Event.DeadLetterListener] [DEBUG] : Started (Akka.Event.DeadLetterListener)
+[2015-10-13 12:13:42.8496] [Akka.Actor.GuardianActor] [DEBUG] : now supervising akka://sampleweb/user/command-proc
+[2015-10-13 12:13:42.8496] [Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor] [DEBUG] : AggregateRootCoordinatorActor entering Ready state
+[2015-10-13 12:13:42.8496] [Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor] [DEBUG] : AggregateRootCoordinatorActor:PreStart
+[2015-10-13 12:13:42.8496] [Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor] [DEBUG] : Started (Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor)
+[2015-10-13 12:14:53.3766] [Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor] [DEBUG] : now supervising akka://sampleweb/user/command-proc/aggregates(account)4481f963-aa44-4fb9-9dfc-4becf9dac036
+[2015-10-13 12:14:53.3956] [Actors.AccountActor] [DEBUG] : Started (Actors.AccountActor)
+[2015-10-13 12:14:53.3956] [Akka.Actor.SystemGuardianActor] [DEBUG] : now supervising akka://sampleweb/system/akka.persistence.snapshot-store.event-store
+[2015-10-13 12:14:53.3956] [EventStore.Persistence.EventStoreSnapshotStore] [DEBUG] : Started (EventStore.Persistence.EventStoreSnapshotStore)
+[2015-10-13 12:14:54.9737] [Akka.Actor.SystemGuardianActor] [DEBUG] : now supervising akka://sampleweb/system/akka.persistence.journal.event-store
+[2015-10-13 12:14:54.9737] [Akka.Actor.GuardianActor] [DEBUG] : now supervising akka://sampleweb/user/$b
+[2015-10-13 12:14:54.9737] [EventStore.Persistence.EventStoreJournal] [DEBUG] : Started (EventStore.Persistence.EventStoreJournal)
+[2015-10-13 12:14:54.9737] [Akka.Persistence.Journal.AsyncWriteJournal+Resequencer] [DEBUG] : Started (Akka.Persistence.Journal.AsyncWriteJournal+Resequencer)
+[2015-10-13 12:14:55.0117] [Actors.AccountActor] [DEBUG] : Recovered state to version 0
+[2015-10-13 12:14:55.0247] [Akka.Actor.DeadLetterActorRef] [INFO] : Message CommandResponse from akka://sampleweb/user/command-proc/aggregates(account)4481f963-aa44-4fb9-9dfc-4becf9dac036 to akka://sampleweb/deadLetters was not delivered. 1 dead letters encountered.
+[2015-10-13 12:14:55.0667] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync looking for Metadata using type Messages.AccountCreated 
+[2015-10-13 12:14:55.0837] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync FOUND Metadata !
+[2015-10-13 12:14:55.0837] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata type = System.Collections.Generic.Dictionary`2[System.String,System.String]
+[2015-10-13 12:16:45.0370] [Akka.Event.EventStream] [DEBUG] : subscribing [akka://sampleweb/system/log1-NLogLogger] to channel Akka.Event.Info
+[2015-10-13 12:16:45.0750] [Akka.Event.EventStream] [DEBUG] : subscribing [akka://sampleweb/system/log1-NLogLogger] to channel Akka.Event.Warning
+[2015-10-13 12:16:45.0750] [Akka.Event.EventStream] [DEBUG] : subscribing [akka://sampleweb/system/log1-NLogLogger] to channel Akka.Event.Error
+[2015-10-13 12:16:45.0750] [Akka.Event.EventStream] [DEBUG] : Logger log1-NLogLogger [NLogLogger] started
+[2015-10-13 12:16:45.0750] [Akka.Event.EventStream] [DEBUG] : subscribing [akka://sampleweb/system/UnhandledMessageForwarder] to channel Akka.Event.UnhandledMessage
+[2015-10-13 12:16:45.0750] [Akka.Actor.SystemGuardianActor] [DEBUG] : now supervising akka://sampleweb/system/UnhandledMessageForwarder
+[2015-10-13 12:16:45.0750] [Akka.Event.EventStream] [DEBUG] : StandardOutLogger being removed
+[2015-10-13 12:16:45.0750] [Akka.Event.LoggingBus+UnhandledMessageForwarder] [DEBUG] : Started (Akka.Event.LoggingBus+UnhandledMessageForwarder)
+[2015-10-13 12:16:45.0880] [Akka.Event.EventStream] [DEBUG] : unsubscribing [akka://all-systems/] from all channels
+[2015-10-13 12:16:45.0880] [Akka.Event.EventStream] [DEBUG] : Default Loggers started
+[2015-10-13 12:16:45.0880] [Akka.Actor.SystemGuardianActor] [DEBUG] : now supervising akka://sampleweb/system/deadLetterListener
+[2015-10-13 12:16:45.0880] [Akka.Event.EventStream] [DEBUG] : subscribing [akka://sampleweb/system/deadLetterListener] to channel Akka.Event.DeadLetter
+[2015-10-13 12:16:45.0880] [Akka.Event.DeadLetterListener] [DEBUG] : Started (Akka.Event.DeadLetterListener)
+[2015-10-13 12:16:45.0880] [Akka.Actor.GuardianActor] [DEBUG] : now supervising akka://sampleweb/user/command-proc
+[2015-10-13 12:16:45.0880] [Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor] [DEBUG] : AggregateRootCoordinatorActor entering Ready state
+[2015-10-13 12:16:45.0880] [Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor] [DEBUG] : AggregateRootCoordinatorActor:PreStart
+[2015-10-13 12:16:45.0880] [Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor] [DEBUG] : Started (Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor)
+[2015-10-13 12:17:00.5119] [Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor] [DEBUG] : now supervising akka://sampleweb/user/command-proc/aggregates(account)4597c7e7-67c4-4d0c-8531-11319aa932de
+[2015-10-13 12:17:00.5299] [Actors.AccountActor] [DEBUG] : Started (Actors.AccountActor)
+[2015-10-13 12:17:00.5359] [Akka.Actor.SystemGuardianActor] [DEBUG] : now supervising akka://sampleweb/system/akka.persistence.snapshot-store.event-store
+[2015-10-13 12:17:00.5359] [EventStore.Persistence.EventStoreSnapshotStore] [DEBUG] : Started (EventStore.Persistence.EventStoreSnapshotStore)
+[2015-10-13 12:17:02.0880] [Akka.Actor.SystemGuardianActor] [DEBUG] : now supervising akka://sampleweb/system/akka.persistence.journal.event-store
+[2015-10-13 12:17:02.0880] [Akka.Actor.GuardianActor] [DEBUG] : now supervising akka://sampleweb/user/$b
+[2015-10-13 12:17:02.0930] [EventStore.Persistence.EventStoreJournal] [DEBUG] : Started (EventStore.Persistence.EventStoreJournal)
+[2015-10-13 12:17:02.0930] [Akka.Persistence.Journal.AsyncWriteJournal+Resequencer] [DEBUG] : Started (Akka.Persistence.Journal.AsyncWriteJournal+Resequencer)
+[2015-10-13 12:17:02.1200] [Actors.AccountActor] [DEBUG] : Recovered state to version 0
+[2015-10-13 12:17:02.1320] [Akka.Actor.DeadLetterActorRef] [INFO] : Message CommandResponse from akka://sampleweb/user/command-proc/aggregates(account)4597c7e7-67c4-4d0c-8531-11319aa932de to akka://sampleweb/deadLetters was not delivered. 1 dead letters encountered.
+[2015-10-13 12:17:02.1720] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync looking for Metadata using type Messages.AccountCreated 
+[2015-10-13 12:17:05.6892] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync FOUND Metadata !
+[2015-10-13 12:17:05.7162] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata type = System.Collections.Generic.Dictionary`2[System.String,System.String]
+[2015-10-13 12:17:36.9270] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata json = {
+  "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String, mscorlib]], mscorlib",
+  "Username": "",
+  "IpAddress": "::1"
+}
+[2015-10-13 12:17:36.9270] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync looking for Metadata using type Messages.AccountCreated 
+[2015-10-13 12:17:36.9280] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync FOUND Metadata !
+[2015-10-13 12:17:36.9280] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata type = System.Collections.Generic.Dictionary`2[System.String,System.String]
+[2015-10-13 12:17:38.1511] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata json = {
+  "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String, mscorlib]], mscorlib",
+  "Username": "",
+  "IpAddress": "::1"
+}
+[2015-10-13 12:17:39.1671] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync looking for Metadata using type Messages.AccountCreated 
+[2015-10-13 12:17:41.2792] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync FOUND Metadata !
+[2015-10-13 12:17:41.3132] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata type = System.Collections.Generic.Dictionary`2[System.String,System.String]
+[2015-10-13 12:17:41.3132] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata json = {
+  "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String, mscorlib]], mscorlib",
+  "Username": "",
+  "IpAddress": "::1"
+}
+[2015-10-13 12:18:39.1086] [Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor] [DEBUG] : now supervising akka://sampleweb/user/command-proc/aggregates(account)c0f8d8a1-4394-4f4b-be54-6583c1cbbb29
+[2015-10-13 12:18:39.1096] [Actors.AccountActor] [DEBUG] : Started (Actors.AccountActor)
+[2015-10-13 12:18:39.1096] [Actors.AccountActor] [DEBUG] : Recovered state to version 0
+[2015-10-13 12:18:46.7990] [Akka.Actor.DeadLetterActorRef] [INFO] : Message CommandResponse from akka://sampleweb/user/command-proc/aggregates(account)c0f8d8a1-4394-4f4b-be54-6583c1cbbb29 to akka://sampleweb/deadLetters was not delivered. 2 dead letters encountered.
+[2015-10-13 12:18:47.0000] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync looking for Metadata using type Messages.AccountCreated 
+[2015-10-13 12:18:47.0000] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync FOUND Metadata !
+[2015-10-13 12:18:47.0000] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata type = System.Collections.Generic.Dictionary`2[System.String,System.String]
+[2015-10-13 12:18:47.0000] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata json = {
+  "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String, mscorlib]], mscorlib",
+  "Username": "",
+  "IpAddress": "::1"
+}
+[2015-10-13 12:20:19.9163] [Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor] [DEBUG] : now supervising akka://sampleweb/user/command-proc/aggregates(account)89afa097-849d-4270-964c-a4ca1a31b8b9
+[2015-10-13 12:20:19.9183] [Actors.AccountActor] [DEBUG] : Started (Actors.AccountActor)
+[2015-10-13 12:20:19.9943] [Actors.AccountActor] [DEBUG] : Recovered state to version 0
+[2015-10-13 12:20:22.7575] [Akka.Actor.DeadLetterActorRef] [INFO] : Message CommandResponse from akka://sampleweb/user/command-proc/aggregates(account)89afa097-849d-4270-964c-a4ca1a31b8b9 to akka://sampleweb/deadLetters was not delivered. 3 dead letters encountered.
+[2015-10-13 12:20:22.7815] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync looking for Metadata using type Messages.AccountCreated 
+[2015-10-13 12:20:22.7815] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync FOUND Metadata !
+[2015-10-13 12:20:22.7815] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata type = System.Collections.Generic.Dictionary`2[System.String,System.String]
+[2015-10-13 12:20:22.7815] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata json = {
+  "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String, mscorlib]], mscorlib",
+  "Username": "",
+  "IpAddress": "::1"
+}
+[2015-10-13 12:21:47.6263] [Akka.Event.EventStream] [DEBUG] : subscribing [akka://sampleweb/system/log1-NLogLogger] to channel Akka.Event.Info
+[2015-10-13 12:21:47.6453] [Akka.Event.EventStream] [DEBUG] : subscribing [akka://sampleweb/system/log1-NLogLogger] to channel Akka.Event.Warning
+[2015-10-13 12:21:47.6453] [Akka.Event.EventStream] [DEBUG] : subscribing [akka://sampleweb/system/log1-NLogLogger] to channel Akka.Event.Error
+[2015-10-13 12:21:47.6453] [Akka.Event.EventStream] [DEBUG] : Logger log1-NLogLogger [NLogLogger] started
+[2015-10-13 12:21:47.6543] [Akka.Actor.SystemGuardianActor] [DEBUG] : now supervising akka://sampleweb/system/UnhandledMessageForwarder
+[2015-10-13 12:21:47.6543] [Akka.Event.EventStream] [DEBUG] : subscribing [akka://sampleweb/system/UnhandledMessageForwarder] to channel Akka.Event.UnhandledMessage
+[2015-10-13 12:21:47.6543] [Akka.Event.EventStream] [DEBUG] : StandardOutLogger being removed
+[2015-10-13 12:21:47.6543] [Akka.Event.EventStream] [DEBUG] : unsubscribing [akka://all-systems/] from all channels
+[2015-10-13 12:21:47.6543] [Akka.Event.LoggingBus+UnhandledMessageForwarder] [DEBUG] : Started (Akka.Event.LoggingBus+UnhandledMessageForwarder)
+[2015-10-13 12:21:47.6543] [Akka.Event.EventStream] [DEBUG] : Default Loggers started
+[2015-10-13 12:21:47.6543] [Akka.Actor.SystemGuardianActor] [DEBUG] : now supervising akka://sampleweb/system/deadLetterListener
+[2015-10-13 12:21:47.6543] [Akka.Event.EventStream] [DEBUG] : subscribing [akka://sampleweb/system/deadLetterListener] to channel Akka.Event.DeadLetter
+[2015-10-13 12:21:47.6543] [Akka.Event.DeadLetterListener] [DEBUG] : Started (Akka.Event.DeadLetterListener)
+[2015-10-13 12:21:47.6543] [Akka.Actor.GuardianActor] [DEBUG] : now supervising akka://sampleweb/user/command-proc
+[2015-10-13 12:21:47.6543] [Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor] [DEBUG] : AggregateRootCoordinatorActor entering Ready state
+[2015-10-13 12:21:47.6543] [Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor] [DEBUG] : AggregateRootCoordinatorActor:PreStart
+[2015-10-13 12:21:47.6683] [Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor] [DEBUG] : Started (Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor)
+[2015-10-13 12:25:01.3474] [Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor] [DEBUG] : now supervising akka://sampleweb/user/command-proc/aggregates(account)9137e795-48cd-4744-a289-d512d91cc500
+[2015-10-13 12:25:01.3694] [Actors.AccountActor] [DEBUG] : Started (Actors.AccountActor)
+[2015-10-13 12:25:01.3764] [Akka.Actor.SystemGuardianActor] [DEBUG] : now supervising akka://sampleweb/system/akka.persistence.snapshot-store.event-store
+[2015-10-13 12:25:01.3764] [EventStore.Persistence.EventStoreSnapshotStore] [DEBUG] : Started (EventStore.Persistence.EventStoreSnapshotStore)
+[2015-10-13 12:25:02.9305] [Akka.Actor.SystemGuardianActor] [DEBUG] : now supervising akka://sampleweb/system/akka.persistence.journal.event-store
+[2015-10-13 12:25:02.9305] [Akka.Actor.GuardianActor] [DEBUG] : now supervising akka://sampleweb/user/$b
+[2015-10-13 12:25:02.9355] [EventStore.Persistence.EventStoreJournal] [DEBUG] : Started (EventStore.Persistence.EventStoreJournal)
+[2015-10-13 12:25:02.9355] [Akka.Persistence.Journal.AsyncWriteJournal+Resequencer] [DEBUG] : Started (Akka.Persistence.Journal.AsyncWriteJournal+Resequencer)
+[2015-10-13 12:25:02.9625] [Actors.AccountActor] [DEBUG] : Recovered state to version 0
+[2015-10-13 12:25:02.9745] [Akka.Actor.DeadLetterActorRef] [INFO] : Message CommandResponse from akka://sampleweb/user/command-proc/aggregates(account)9137e795-48cd-4744-a289-d512d91cc500 to akka://sampleweb/deadLetters was not delivered. 1 dead letters encountered.
+[2015-10-13 12:25:03.0145] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync looking for Metadata using type Messages.AccountCreated 
+[2015-10-13 12:25:03.0145] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync FOUND Metadata !
+[2015-10-13 12:25:03.0145] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata type = System.Collections.Generic.Dictionary`2[System.String,System.String]
+[2015-10-13 12:25:03.0145] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata json = {
+  "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String, mscorlib]], mscorlib",
+  "Username": "anonymous",
+  "IpAddress": "::1"
+}
+[2015-10-13 12:27:08.0617] [Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor] [DEBUG] : now supervising akka://sampleweb/user/command-proc/aggregates(account)08d694a1-97ab-44d8-8754-51b3773f13bd
+[2015-10-13 12:27:08.0647] [Actors.AccountActor] [DEBUG] : Started (Actors.AccountActor)
+[2015-10-13 12:27:08.0807] [Actors.AccountActor] [DEBUG] : Recovered state to version 0
+[2015-10-13 12:27:08.0807] [Akka.Actor.DeadLetterActorRef] [INFO] : Message CommandResponse from akka://sampleweb/user/command-proc/aggregates(account)08d694a1-97ab-44d8-8754-51b3773f13bd to akka://sampleweb/deadLetters was not delivered. 2 dead letters encountered.
+[2015-10-13 12:27:08.0807] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync looking for Metadata using type Messages.AccountCreated 
+[2015-10-13 12:27:08.0807] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync FOUND Metadata !
+[2015-10-13 12:27:08.0807] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata type = System.Collections.Generic.Dictionary`2[System.String,System.String]
+[2015-10-13 12:27:08.0807] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata json = {
+  "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String, mscorlib]], mscorlib",
+  "Username": "anonymous",
+  "IpAddress": "::1"
+}
+[2015-10-13 12:27:17.7222] [Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor] [DEBUG] : now supervising akka://sampleweb/user/command-proc/aggregates(account)7b67bd92-62ef-4c00-90aa-ae94a58be607
+[2015-10-13 12:27:17.7222] [Actors.AccountActor] [DEBUG] : Started (Actors.AccountActor)
+[2015-10-13 12:27:17.7222] [Actors.AccountActor] [DEBUG] : Recovered state to version 0
+[2015-10-13 12:27:17.7222] [Akka.Actor.DeadLetterActorRef] [INFO] : Message CommandResponse from akka://sampleweb/user/command-proc/aggregates(account)7b67bd92-62ef-4c00-90aa-ae94a58be607 to akka://sampleweb/deadLetters was not delivered. 3 dead letters encountered.
+[2015-10-13 12:27:17.7222] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync looking for Metadata using type Messages.AccountCreated 
+[2015-10-13 12:27:17.7222] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync FOUND Metadata !
+[2015-10-13 12:27:17.7222] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata type = System.Collections.Generic.Dictionary`2[System.String,System.String]
+[2015-10-13 12:27:17.7222] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata json = {
+  "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String, mscorlib]], mscorlib",
+  "Username": "anonymous",
+  "IpAddress": "::1"
+}
+[2015-10-13 12:27:43.1097] [Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor] [DEBUG] : now supervising akka://sampleweb/user/command-proc/aggregates(account)ab164f16-2ab3-4638-b5bb-d4ec524f690c
+[2015-10-13 12:27:43.1097] [Actors.AccountActor] [DEBUG] : Started (Actors.AccountActor)
+[2015-10-13 12:27:43.1097] [Actors.AccountActor] [DEBUG] : Recovered state to version 0
+[2015-10-13 12:27:43.1097] [Akka.Actor.DeadLetterActorRef] [INFO] : Message CommandResponse from akka://sampleweb/user/command-proc/aggregates(account)ab164f16-2ab3-4638-b5bb-d4ec524f690c to akka://sampleweb/deadLetters was not delivered. 4 dead letters encountered.
+[2015-10-13 12:27:43.1097] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync looking for Metadata using type Messages.AccountCreated 
+[2015-10-13 12:27:43.1097] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync FOUND Metadata !
+[2015-10-13 12:27:43.1097] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata type = System.Collections.Generic.Dictionary`2[System.String,System.String]
+[2015-10-13 12:27:43.1097] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata json = {
+  "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String, mscorlib]], mscorlib",
+  "Username": "anonymous",
+  "IpAddress": "::1"
+}
+[2015-10-13 12:29:55.4012] [Grotto.Core.Actor.Actors.AggregateRootCoordinatorActor] [DEBUG] : now supervising akka://sampleweb/user/command-proc/aggregates(account)2084859f-1250-48bd-aad7-c1e36edb97d9
+[2015-10-13 12:29:55.4012] [Actors.AccountActor] [DEBUG] : Started (Actors.AccountActor)
+[2015-10-13 12:29:55.4082] [Actors.AccountActor] [DEBUG] : Recovered state to version 0
+[2015-10-13 12:29:55.4082] [Akka.Actor.DeadLetterActorRef] [INFO] : Message CommandResponse from akka://sampleweb/user/command-proc/aggregates(account)2084859f-1250-48bd-aad7-c1e36edb97d9 to akka://sampleweb/deadLetters was not delivered. 5 dead letters encountered.
+[2015-10-13 12:29:55.4082] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync looking for Metadata using type Messages.AccountCreated 
+[2015-10-13 12:29:55.4082] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync FOUND Metadata !
+[2015-10-13 12:29:55.4082] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata type = System.Collections.Generic.Dictionary`2[System.String,System.String]
+[2015-10-13 12:29:55.4082] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata json = {
+  "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String, mscorlib]], mscorlib",
+  "Username": "anonymous",
+  "IpAddress": "::1"
+}
+[2015-10-13 12:44:26.5381] [Akka.Actor.DeadLetterActorRef] [INFO] : Message CommandResponse from akka://sampleweb/user/command-proc/aggregates(account)9137e795-48cd-4744-a289-d512d91cc500 to akka://sampleweb/deadLetters was not delivered. 6 dead letters encountered.
+[2015-10-13 12:44:26.5481] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync looking for Metadata using type Messages.AccountMailingAddressUpdated 
+[2015-10-13 12:44:26.5481] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync FOUND Metadata !
+[2015-10-13 12:44:26.5481] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata type = System.Collections.Generic.Dictionary`2[System.String,System.String]
+[2015-10-13 12:44:26.5481] [EventStore.Persistence.EventStoreJournal] [DEBUG] : EventStoreJournal:WriteMessagesAsync Metadata json = {
+  "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String, mscorlib]], mscorlib",
+  "Username": "anonymous",
+  "IpAddress": "::1"
+}

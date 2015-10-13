@@ -2,6 +2,7 @@
 using Akka.EventStore.Cqrs.Core.Domain;
 using Domain;
 using Messages;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,8 +34,7 @@ namespace Actors
         {
             if (Created)
                 throw new DomainException(string.Format("Account {0:n} already exists.", msg.AggregateId));
-
-            Events.Publish(new AccountCreated(msg.AggregateId, msg.TaxNumber, msg.EntityName, msg.Type, Version + 1));
+            Events.Publish(new AccountCreated(msg.AggregateId, msg.TaxNumber, msg.EntityName, msg.Type, Version + 1, ContextHelper.CreateFromCommand(msg)));
         }
 
         public void Apply(AccountCreated e)
@@ -53,7 +53,7 @@ namespace Actors
             if (!Created)
                 throw new DomainException(string.Format("Account {0:n} does not exist.", msg.AggregateId));
 
-            Events.Publish(new AccountUpdated(msg.AggregateId, msg.TaxNumber, msg.EntityName, msg.Type, Version + 1));
+            Events.Publish(new AccountUpdated(msg.AggregateId, msg.TaxNumber, msg.EntityName, msg.Type, Version + 1, ContextHelper.CreateFromCommand(msg)));
         }
 
         public void Apply(AccountUpdated e)
@@ -69,7 +69,7 @@ namespace Actors
             if (!Created)
                 throw new DomainException(string.Format("Account {0:n} does not exist.", msg.AggregateId));
 
-            Events.Publish(new AccountMailingAddressUpdated(msg.AggregateId, msg.MailingAddress, Version + 1));
+            Events.Publish(new AccountMailingAddressUpdated(msg.AggregateId, msg.MailingAddress, Version + 1, ContextHelper.CreateFromCommand(msg)));
         }
 
         public void Apply(AccountMailingAddressUpdated e)

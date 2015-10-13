@@ -1,0 +1,41 @@
+function findAccountById(arr, propValue) {
+  for (var i=0; i < arr.length; i++)
+    if (arr[i]["AccountId"] == propValue)
+      return arr[i];
+  // will return undefined if not found; you could return a default instead
+}
+
+fromAll().
+    when({
+        "Akka.Persistence.Persistent" : function(state,evt) {
+              var data = evt.body["Payload"];
+              if(data.$type == "Messages.AccountCreated, Actors")
+              {
+                if(state.Accounts === undefined)
+                {
+                    state.Accounts = [];
+                    state.Accounts.push({
+                        EntityName: data.EntityName,
+                        AccountId: data.AccountId,
+                        TaxNumber: data.TaxNumber
+                    });
+                }
+                else
+                {
+                    state.Accounts.push({
+                        EntityName: data.EntityName,
+                        AccountId: data.AccountId,
+                        TaxNumber: data.TaxNumber
+                    });
+                }
+              }
+              if(data.$type == "Messages.AccountMailingAddressUpdated, Actors")
+              {
+                var account = findAccountById(state.Accounts,data.AccountId);
+                if(account !== undefined)
+                {
+                    account.MailingAddress = data.MailingAddress;
+                }
+              }
+         }
+    });
